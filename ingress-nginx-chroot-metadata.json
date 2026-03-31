@@ -1,0 +1,691 @@
+{
+  "buildx.build.provenance/linux/amd64": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/alpine@3.23.3?platform=linux%2Famd64",
+        "digest": {
+          "sha256": "25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659"
+        }
+      },
+      {
+        "uri": "pkg:docker/ghcr.io/netcracker/ingress-nginx/nginx@v2.2.7?digest=sha256:edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile-chroot"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "build-arg:BASE_IMAGE": "ghcr.io/netcracker/ingress-nginx/nginx:v2.2.7@sha256:edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004",
+          "build-arg:BUILD_ID": "UNSET",
+          "build-arg:COMMIT_SHA": "git-5641bb3",
+          "build-arg:VERSION": "v1.14.1",
+          "no-cache": ""
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ]
+      },
+      "environment": {
+        "github_actor": "borislavr",
+        "github_actor_id": "19729448",
+        "github_event_name": "workflow_dispatch",
+        "github_event_payload": {
+          "inputs": {
+            "chart-version": "4.14.4",
+            "controller-version": "v1.14.1",
+            "release": "true"
+          },
+          "organization": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/236559504?v=4",
+            "description": null,
+            "events_url": "https://api.github.com/orgs/testpatchesorg/events",
+            "hooks_url": "https://api.github.com/orgs/testpatchesorg/hooks",
+            "id": 236559504,
+            "issues_url": "https://api.github.com/orgs/testpatchesorg/issues",
+            "login": "testpatchesorg",
+            "members_url": "https://api.github.com/orgs/testpatchesorg/members{/member}",
+            "node_id": "O_kgDODhmckA",
+            "public_members_url": "https://api.github.com/orgs/testpatchesorg/public_members{/member}",
+            "repos_url": "https://api.github.com/orgs/testpatchesorg/repos",
+            "url": "https://api.github.com/orgs/testpatchesorg"
+          },
+          "ref": "refs/heads/main",
+          "repository": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/branches{/branch}",
+            "clone_url": "https://github.com/testpatchesorg/ingress-nginx.git",
+            "collaborators_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/comments{/number}",
+            "commits_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/contributors",
+            "created_at": "2026-03-31T06:40:52Z",
+            "custom_properties": {},
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/deployments",
+            "description": "Ingress NGINX Controller for Kubernetes",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/downloads",
+            "events_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/events",
+            "fork": true,
+            "forks": 0,
+            "forks_count": 0,
+            "forks_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/forks",
+            "full_name": "testpatchesorg/ingress-nginx",
+            "git_commits_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/tags{/sha}",
+            "git_url": "git://github.com/testpatchesorg/ingress-nginx.git",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": false,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://kubernetes.github.io/ingress-nginx/",
+            "hooks_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/hooks",
+            "html_url": "https://github.com/testpatchesorg/ingress-nginx",
+            "id": 1196907451,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues{/number}",
+            "keys_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/labels{/name}",
+            "language": "Go",
+            "languages_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/merges",
+            "milestones_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/milestones{/number}",
+            "mirror_url": null,
+            "name": "ingress-nginx",
+            "node_id": "R_kgDOR1dbuw",
+            "notifications_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/notifications{?since,all,participating}",
+            "open_issues": 10,
+            "open_issues_count": 10,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/236559504?v=4",
+              "events_url": "https://api.github.com/users/testpatchesorg/events{/privacy}",
+              "followers_url": "https://api.github.com/users/testpatchesorg/followers",
+              "following_url": "https://api.github.com/users/testpatchesorg/following{/other_user}",
+              "gists_url": "https://api.github.com/users/testpatchesorg/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/testpatchesorg",
+              "id": 236559504,
+              "login": "testpatchesorg",
+              "node_id": "O_kgDODhmckA",
+              "organizations_url": "https://api.github.com/users/testpatchesorg/orgs",
+              "received_events_url": "https://api.github.com/users/testpatchesorg/received_events",
+              "repos_url": "https://api.github.com/users/testpatchesorg/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/testpatchesorg/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/testpatchesorg/subscriptions",
+              "type": "Organization",
+              "url": "https://api.github.com/users/testpatchesorg",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/pulls{/number}",
+            "pushed_at": "2026-03-31T15:04:33Z",
+            "releases_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/releases{/id}",
+            "size": 121481,
+            "ssh_url": "git@github.com:testpatchesorg/ingress-nginx.git",
+            "stargazers_count": 0,
+            "stargazers_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/stargazers",
+            "statuses_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/subscribers",
+            "subscription_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/subscription",
+            "svn_url": "https://github.com/testpatchesorg/ingress-nginx",
+            "tags_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/tags",
+            "teams_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/teams",
+            "topics": [],
+            "trees_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/trees{/sha}",
+            "updated_at": "2026-03-31T15:04:43Z",
+            "url": "https://api.github.com/repos/testpatchesorg/ingress-nginx",
+            "visibility": "public",
+            "watchers": 0,
+            "watchers_count": 0,
+            "web_commit_signoff_required": false
+          },
+          "sender": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/19729448?v=4",
+            "events_url": "https://api.github.com/users/borislavr/events{/privacy}",
+            "followers_url": "https://api.github.com/users/borislavr/followers",
+            "following_url": "https://api.github.com/users/borislavr/following{/other_user}",
+            "gists_url": "https://api.github.com/users/borislavr/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/borislavr",
+            "id": 19729448,
+            "login": "borislavr",
+            "node_id": "MDQ6VXNlcjE5NzI5NDQ4",
+            "organizations_url": "https://api.github.com/users/borislavr/orgs",
+            "received_events_url": "https://api.github.com/users/borislavr/received_events",
+            "repos_url": "https://api.github.com/users/borislavr/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/borislavr/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/borislavr/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/borislavr",
+            "user_view_type": "public"
+          },
+          "workflow": ".github/workflows/controllers.yaml"
+        },
+        "github_job": "build-controllers-images",
+        "github_ref": "refs/heads/main",
+        "github_ref_name": "main",
+        "github_ref_protected": "false",
+        "github_ref_type": "branch",
+        "github_repository": "testpatchesorg/ingress-nginx",
+        "github_repository_id": "1196907451",
+        "github_repository_owner": "testpatchesorg",
+        "github_repository_owner_id": "236559504",
+        "github_run_attempt": "1",
+        "github_run_id": "23804424041",
+        "github_run_number": "14",
+        "github_runner_arch": "X64",
+        "github_runner_environment": "github-hosted",
+        "github_runner_image_os": "ubuntu24",
+        "github_runner_image_version": "20260323.65.1",
+        "github_runner_name": "GitHub Actions 1000003572",
+        "github_runner_os": "Linux",
+        "github_runner_tracking_id": "github_a72c9c17-f1c0-4d3a-bf49-a78dd03f935f",
+        "github_server_url": "https://github.com",
+        "github_triggering_actor": "borislavr",
+        "github_workflow": "Controller Build",
+        "github_workflow_ref": "testpatchesorg/ingress-nginx/.github/workflows/controllers.yaml@refs/heads/main",
+        "github_workflow_sha": "5641bb3bcfc955d9cb405fe3c28d94e566bad60c",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.provenance/linux/arm/v7": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/alpine@3.23.3?platform=linux%2Farm%2Fv7",
+        "digest": {
+          "sha256": "25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659"
+        }
+      },
+      {
+        "uri": "pkg:docker/ghcr.io/netcracker/ingress-nginx/nginx@v2.2.7?digest=sha256:edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004\u0026platform=linux%2Farm%2Fv7",
+        "digest": {
+          "sha256": "edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile-chroot"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "build-arg:BASE_IMAGE": "ghcr.io/netcracker/ingress-nginx/nginx:v2.2.7@sha256:edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004",
+          "build-arg:BUILD_ID": "UNSET",
+          "build-arg:COMMIT_SHA": "git-5641bb3",
+          "build-arg:VERSION": "v1.14.1",
+          "no-cache": ""
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ]
+      },
+      "environment": {
+        "github_actor": "borislavr",
+        "github_actor_id": "19729448",
+        "github_event_name": "workflow_dispatch",
+        "github_event_payload": {
+          "inputs": {
+            "chart-version": "4.14.4",
+            "controller-version": "v1.14.1",
+            "release": "true"
+          },
+          "organization": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/236559504?v=4",
+            "description": null,
+            "events_url": "https://api.github.com/orgs/testpatchesorg/events",
+            "hooks_url": "https://api.github.com/orgs/testpatchesorg/hooks",
+            "id": 236559504,
+            "issues_url": "https://api.github.com/orgs/testpatchesorg/issues",
+            "login": "testpatchesorg",
+            "members_url": "https://api.github.com/orgs/testpatchesorg/members{/member}",
+            "node_id": "O_kgDODhmckA",
+            "public_members_url": "https://api.github.com/orgs/testpatchesorg/public_members{/member}",
+            "repos_url": "https://api.github.com/orgs/testpatchesorg/repos",
+            "url": "https://api.github.com/orgs/testpatchesorg"
+          },
+          "ref": "refs/heads/main",
+          "repository": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/branches{/branch}",
+            "clone_url": "https://github.com/testpatchesorg/ingress-nginx.git",
+            "collaborators_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/comments{/number}",
+            "commits_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/contributors",
+            "created_at": "2026-03-31T06:40:52Z",
+            "custom_properties": {},
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/deployments",
+            "description": "Ingress NGINX Controller for Kubernetes",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/downloads",
+            "events_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/events",
+            "fork": true,
+            "forks": 0,
+            "forks_count": 0,
+            "forks_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/forks",
+            "full_name": "testpatchesorg/ingress-nginx",
+            "git_commits_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/tags{/sha}",
+            "git_url": "git://github.com/testpatchesorg/ingress-nginx.git",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": false,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://kubernetes.github.io/ingress-nginx/",
+            "hooks_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/hooks",
+            "html_url": "https://github.com/testpatchesorg/ingress-nginx",
+            "id": 1196907451,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues{/number}",
+            "keys_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/labels{/name}",
+            "language": "Go",
+            "languages_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/merges",
+            "milestones_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/milestones{/number}",
+            "mirror_url": null,
+            "name": "ingress-nginx",
+            "node_id": "R_kgDOR1dbuw",
+            "notifications_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/notifications{?since,all,participating}",
+            "open_issues": 10,
+            "open_issues_count": 10,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/236559504?v=4",
+              "events_url": "https://api.github.com/users/testpatchesorg/events{/privacy}",
+              "followers_url": "https://api.github.com/users/testpatchesorg/followers",
+              "following_url": "https://api.github.com/users/testpatchesorg/following{/other_user}",
+              "gists_url": "https://api.github.com/users/testpatchesorg/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/testpatchesorg",
+              "id": 236559504,
+              "login": "testpatchesorg",
+              "node_id": "O_kgDODhmckA",
+              "organizations_url": "https://api.github.com/users/testpatchesorg/orgs",
+              "received_events_url": "https://api.github.com/users/testpatchesorg/received_events",
+              "repos_url": "https://api.github.com/users/testpatchesorg/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/testpatchesorg/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/testpatchesorg/subscriptions",
+              "type": "Organization",
+              "url": "https://api.github.com/users/testpatchesorg",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/pulls{/number}",
+            "pushed_at": "2026-03-31T15:04:33Z",
+            "releases_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/releases{/id}",
+            "size": 121481,
+            "ssh_url": "git@github.com:testpatchesorg/ingress-nginx.git",
+            "stargazers_count": 0,
+            "stargazers_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/stargazers",
+            "statuses_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/subscribers",
+            "subscription_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/subscription",
+            "svn_url": "https://github.com/testpatchesorg/ingress-nginx",
+            "tags_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/tags",
+            "teams_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/teams",
+            "topics": [],
+            "trees_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/trees{/sha}",
+            "updated_at": "2026-03-31T15:04:43Z",
+            "url": "https://api.github.com/repos/testpatchesorg/ingress-nginx",
+            "visibility": "public",
+            "watchers": 0,
+            "watchers_count": 0,
+            "web_commit_signoff_required": false
+          },
+          "sender": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/19729448?v=4",
+            "events_url": "https://api.github.com/users/borislavr/events{/privacy}",
+            "followers_url": "https://api.github.com/users/borislavr/followers",
+            "following_url": "https://api.github.com/users/borislavr/following{/other_user}",
+            "gists_url": "https://api.github.com/users/borislavr/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/borislavr",
+            "id": 19729448,
+            "login": "borislavr",
+            "node_id": "MDQ6VXNlcjE5NzI5NDQ4",
+            "organizations_url": "https://api.github.com/users/borislavr/orgs",
+            "received_events_url": "https://api.github.com/users/borislavr/received_events",
+            "repos_url": "https://api.github.com/users/borislavr/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/borislavr/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/borislavr/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/borislavr",
+            "user_view_type": "public"
+          },
+          "workflow": ".github/workflows/controllers.yaml"
+        },
+        "github_job": "build-controllers-images",
+        "github_ref": "refs/heads/main",
+        "github_ref_name": "main",
+        "github_ref_protected": "false",
+        "github_ref_type": "branch",
+        "github_repository": "testpatchesorg/ingress-nginx",
+        "github_repository_id": "1196907451",
+        "github_repository_owner": "testpatchesorg",
+        "github_repository_owner_id": "236559504",
+        "github_run_attempt": "1",
+        "github_run_id": "23804424041",
+        "github_run_number": "14",
+        "github_runner_arch": "X64",
+        "github_runner_environment": "github-hosted",
+        "github_runner_image_os": "ubuntu24",
+        "github_runner_image_version": "20260323.65.1",
+        "github_runner_name": "GitHub Actions 1000003572",
+        "github_runner_os": "Linux",
+        "github_runner_tracking_id": "github_a72c9c17-f1c0-4d3a-bf49-a78dd03f935f",
+        "github_server_url": "https://github.com",
+        "github_triggering_actor": "borislavr",
+        "github_workflow": "Controller Build",
+        "github_workflow_ref": "testpatchesorg/ingress-nginx/.github/workflows/controllers.yaml@refs/heads/main",
+        "github_workflow_sha": "5641bb3bcfc955d9cb405fe3c28d94e566bad60c",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.provenance/linux/arm64": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/alpine@3.23.3?platform=linux%2Farm64",
+        "digest": {
+          "sha256": "25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659"
+        }
+      },
+      {
+        "uri": "pkg:docker/ghcr.io/netcracker/ingress-nginx/nginx@v2.2.7?digest=sha256:edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004\u0026platform=linux%2Farm64",
+        "digest": {
+          "sha256": "edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile-chroot"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "build-arg:BASE_IMAGE": "ghcr.io/netcracker/ingress-nginx/nginx:v2.2.7@sha256:edff0fee1fc948cca4824a1bde43451ec0e47e203ba4228b51db2b13a3284004",
+          "build-arg:BUILD_ID": "UNSET",
+          "build-arg:COMMIT_SHA": "git-5641bb3",
+          "build-arg:VERSION": "v1.14.1",
+          "no-cache": ""
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ]
+      },
+      "environment": {
+        "github_actor": "borislavr",
+        "github_actor_id": "19729448",
+        "github_event_name": "workflow_dispatch",
+        "github_event_payload": {
+          "inputs": {
+            "chart-version": "4.14.4",
+            "controller-version": "v1.14.1",
+            "release": "true"
+          },
+          "organization": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/236559504?v=4",
+            "description": null,
+            "events_url": "https://api.github.com/orgs/testpatchesorg/events",
+            "hooks_url": "https://api.github.com/orgs/testpatchesorg/hooks",
+            "id": 236559504,
+            "issues_url": "https://api.github.com/orgs/testpatchesorg/issues",
+            "login": "testpatchesorg",
+            "members_url": "https://api.github.com/orgs/testpatchesorg/members{/member}",
+            "node_id": "O_kgDODhmckA",
+            "public_members_url": "https://api.github.com/orgs/testpatchesorg/public_members{/member}",
+            "repos_url": "https://api.github.com/orgs/testpatchesorg/repos",
+            "url": "https://api.github.com/orgs/testpatchesorg"
+          },
+          "ref": "refs/heads/main",
+          "repository": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/branches{/branch}",
+            "clone_url": "https://github.com/testpatchesorg/ingress-nginx.git",
+            "collaborators_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/comments{/number}",
+            "commits_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/contributors",
+            "created_at": "2026-03-31T06:40:52Z",
+            "custom_properties": {},
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/deployments",
+            "description": "Ingress NGINX Controller for Kubernetes",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/downloads",
+            "events_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/events",
+            "fork": true,
+            "forks": 0,
+            "forks_count": 0,
+            "forks_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/forks",
+            "full_name": "testpatchesorg/ingress-nginx",
+            "git_commits_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/tags{/sha}",
+            "git_url": "git://github.com/testpatchesorg/ingress-nginx.git",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": false,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://kubernetes.github.io/ingress-nginx/",
+            "hooks_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/hooks",
+            "html_url": "https://github.com/testpatchesorg/ingress-nginx",
+            "id": 1196907451,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/issues{/number}",
+            "keys_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/labels{/name}",
+            "language": "Go",
+            "languages_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/merges",
+            "milestones_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/milestones{/number}",
+            "mirror_url": null,
+            "name": "ingress-nginx",
+            "node_id": "R_kgDOR1dbuw",
+            "notifications_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/notifications{?since,all,participating}",
+            "open_issues": 10,
+            "open_issues_count": 10,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/236559504?v=4",
+              "events_url": "https://api.github.com/users/testpatchesorg/events{/privacy}",
+              "followers_url": "https://api.github.com/users/testpatchesorg/followers",
+              "following_url": "https://api.github.com/users/testpatchesorg/following{/other_user}",
+              "gists_url": "https://api.github.com/users/testpatchesorg/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/testpatchesorg",
+              "id": 236559504,
+              "login": "testpatchesorg",
+              "node_id": "O_kgDODhmckA",
+              "organizations_url": "https://api.github.com/users/testpatchesorg/orgs",
+              "received_events_url": "https://api.github.com/users/testpatchesorg/received_events",
+              "repos_url": "https://api.github.com/users/testpatchesorg/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/testpatchesorg/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/testpatchesorg/subscriptions",
+              "type": "Organization",
+              "url": "https://api.github.com/users/testpatchesorg",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/pulls{/number}",
+            "pushed_at": "2026-03-31T15:04:33Z",
+            "releases_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/releases{/id}",
+            "size": 121481,
+            "ssh_url": "git@github.com:testpatchesorg/ingress-nginx.git",
+            "stargazers_count": 0,
+            "stargazers_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/stargazers",
+            "statuses_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/subscribers",
+            "subscription_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/subscription",
+            "svn_url": "https://github.com/testpatchesorg/ingress-nginx",
+            "tags_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/tags",
+            "teams_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/teams",
+            "topics": [],
+            "trees_url": "https://api.github.com/repos/testpatchesorg/ingress-nginx/git/trees{/sha}",
+            "updated_at": "2026-03-31T15:04:43Z",
+            "url": "https://api.github.com/repos/testpatchesorg/ingress-nginx",
+            "visibility": "public",
+            "watchers": 0,
+            "watchers_count": 0,
+            "web_commit_signoff_required": false
+          },
+          "sender": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/19729448?v=4",
+            "events_url": "https://api.github.com/users/borislavr/events{/privacy}",
+            "followers_url": "https://api.github.com/users/borislavr/followers",
+            "following_url": "https://api.github.com/users/borislavr/following{/other_user}",
+            "gists_url": "https://api.github.com/users/borislavr/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/borislavr",
+            "id": 19729448,
+            "login": "borislavr",
+            "node_id": "MDQ6VXNlcjE5NzI5NDQ4",
+            "organizations_url": "https://api.github.com/users/borislavr/orgs",
+            "received_events_url": "https://api.github.com/users/borislavr/received_events",
+            "repos_url": "https://api.github.com/users/borislavr/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/borislavr/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/borislavr/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/borislavr",
+            "user_view_type": "public"
+          },
+          "workflow": ".github/workflows/controllers.yaml"
+        },
+        "github_job": "build-controllers-images",
+        "github_ref": "refs/heads/main",
+        "github_ref_name": "main",
+        "github_ref_protected": "false",
+        "github_ref_type": "branch",
+        "github_repository": "testpatchesorg/ingress-nginx",
+        "github_repository_id": "1196907451",
+        "github_repository_owner": "testpatchesorg",
+        "github_repository_owner_id": "236559504",
+        "github_run_attempt": "1",
+        "github_run_id": "23804424041",
+        "github_run_number": "14",
+        "github_runner_arch": "X64",
+        "github_runner_environment": "github-hosted",
+        "github_runner_image_os": "ubuntu24",
+        "github_runner_image_version": "20260323.65.1",
+        "github_runner_name": "GitHub Actions 1000003572",
+        "github_runner_os": "Linux",
+        "github_runner_tracking_id": "github_a72c9c17-f1c0-4d3a-bf49-a78dd03f935f",
+        "github_server_url": "https://github.com",
+        "github_triggering_actor": "borislavr",
+        "github_workflow": "Controller Build",
+        "github_workflow_ref": "testpatchesorg/ingress-nginx/.github/workflows/controllers.yaml@refs/heads/main",
+        "github_workflow_sha": "5641bb3bcfc955d9cb405fe3c28d94e566bad60c",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "ingress-nginx/ingress-nginx0/xhh8ugvcqereamf6d0qv0oaym",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "digest": "sha256:edb2c3c4a34fb372df0436a1197daac486feacb72e80a2e9d34cea9312374f91",
+    "size": 2385
+  },
+  "containerimage.digest": "sha256:edb2c3c4a34fb372df0436a1197daac486feacb72e80a2e9d34cea9312374f91",
+  "image.name": "ghcr.io/testpatchesorg/ingress-nginx/controller-chroot:v1.14.1"
+}
