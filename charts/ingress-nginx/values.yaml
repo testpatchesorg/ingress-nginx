@@ -30,9 +30,9 @@ controller:
     ## for backwards compatibility consider setting the full image url via the repository value below
     ## use *either* current default registry/image or repository format or installing chart by providing the values.yaml will fail
     ## repository:
-    tag: "v1.14.3"
-    digest: sha256:82917be97c0939f6ada1717bb39aa7e66c229d6cfb10dcfc8f1bd42f9efe0f81
-    digestChroot: sha256:ffdab64d0e0556f810d82d618a0fa97c4fc8dc2bc5717c51bfe83b5d4252c73e
+    tag: "v1.14.6"
+    digest: sha256:f750c91bdd0716e97f7cfbaf36db83676d5a24a60d73c27d8f5398bb511e43ad
+    digestChroot: sha256:850df56703692e77441ac2002d597a93285a73c4d96fb35f04f3204c00f3ace5
     pullPolicy: IfNotPresent
     runAsNonRoot: true
     # -- This value must not be changed using the official image.
