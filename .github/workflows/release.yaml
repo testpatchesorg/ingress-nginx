@@ -121,17 +121,6 @@ jobs:
           ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/ingress-nginx/controller-chroot:${{ env.TAG }}@${{ steps.set-digests.outputs.controller_chroot_digest }}
           \`\`\`
           "
-      - name: Run Release Drafter
-        uses: netcracker/release-drafter@86f4276a3894b5af70480e826c32fe3648ac6a70 # v1.0.0
-        with:
-          config-name: release-drafter-config.yml
-          publish: true
-          name: controller-${{ env.TAG }}
-          tag: ${{ env.TAG }}
-          version: ${{ env.TAG }}
-          latest: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   release-helm-chart:
     permissions:
