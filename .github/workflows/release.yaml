@@ -164,6 +164,7 @@ jobs:
           # Update the helm chart version and appVersion to match the image tag
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull
 
           if [[ -n '${CHART_VERSION}' ]]; then
             yq eval -i '.version = "${{ env.CHART_VERSION }}"' charts/ingress-nginx/Chart.yaml
