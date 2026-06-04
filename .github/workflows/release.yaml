@@ -24,7 +24,7 @@ jobs:
       TAG: ${{ inputs.controller-version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: true
           fetch-tags: true
@@ -51,7 +51,7 @@ jobs:
       TAG: ${{ inputs.controller-version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: true
       - name: Get go version
@@ -59,7 +59,7 @@ jobs:
 
       - name: Set up Go
         id: go
-        uses: actions/setup-go@7a3fe6cf4cb3a834922a1244abfce67bcef6a0c5 # v6.2.0
+        uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # v6.4.0
         with:
           go-version: ${{ env.GOLANG_VERSION }}
           check-latest: true
@@ -154,7 +154,7 @@ jobs:
           echo "9027626f19ff9f3ac668f222917130ac885e289e922e1428bfd2e7f066324e31  /tmp/ah.tar.gz" | shasum --check
           sudo tar --extract --file /tmp/ah.tar.gz --directory /usr/local/bin ah
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           persist-credentials: true
           ref: release-${{ env.TAG }}
